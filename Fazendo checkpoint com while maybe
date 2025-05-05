@@ -1,46 +1,48 @@
-# Checkpoint 1
+
+# Entrada da nota do Checkpoint 1 com validação (entre 0 e 10)
 while True:
     cp1 = float(input("Checkpoint 1 (0 a 10): "))
-    if cp1 >= 0 and cp1 <= 10:
+    if 0 <= cp1 <= 10:
         break
     print("Nota inválida. Digite novamente.")
 
-# Checkpoint 2
+# Entrada da nota do Checkpoint 2 com validação
 while True:
     cp2 = float(input("Checkpoint 2 (0 a 10): "))
-    if cp2 >= 0 and cp2 <= 10:
+    if 0 <= cp2 <= 10:
         break
     print("Nota inválida. Digite novamente.")
 
-# Checkpoint 3
+# Entrada da nota do Checkpoint 3 com validação
 while True:
     cp3 = float(input("Checkpoint 3 (0 a 10): "))
-    if cp3 >= 0 and cp3 <= 10:
+    if 0 <= cp3 <= 10:
         break
     print("Nota inválida. Digite novamente.")
 
-# Sprint 1
+# Entrada da nota da Sprint 1 com validação
 while True:
     sp1 = float(input("Sprint 1 (0 a 10): "))
-    if sp1 >= 0 and sp1 <= 10:
+    if 0 <= sp1 <= 10:
         break
     print("Nota inválida. Digite novamente.")
 
-# Sprint 2
+# Entrada da nota da Sprint 2 com validação
 while True:
     sp2 = float(input("Sprint 2 (0 a 10): "))
-    if sp2 >= 0 and sp2 <= 10:
+    if 0 <= sp2 <= 10:
         break
     print("Nota inválida. Digite novamente.")
 
-# Global Solution
+# Entrada da nota da Global Solution com validação
 while True:
     gs = float(input("Global Solution (0 a 10): "))
-    if gs >= 0 and gs <= 10:
+    if 0 <= gs <= 10:
         break
     print("Nota inválida. Digite novamente.")
 
-# Descarta o menor checkpoint
+# Etapa: Descartar o menor checkpoint
+
 if cp1 <= cp2 and cp1 <= cp3:
     chk1 = cp2
     chk2 = cp3
@@ -51,11 +53,8 @@ else:
     chk1 = cp1
     chk2 = cp2
 
-# Média parcial (2 checkpoints + 2 sprints)
 media_parcial = (chk1 + chk2 + sp1 + sp2) / 4
 
-# Média final
 media_final = (media_parcial * 0.4) + (gs * 0.6)
 
-# Resultado
-print("Média semestral =", round(media_final, 1))
+print(f"Média semestral: {media_final:.1f} (arredondada para uma casa decimal)")
