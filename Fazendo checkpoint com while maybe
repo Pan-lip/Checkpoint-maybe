@@ -1,0 +1,61 @@
+# Checkpoint 1
+while True:
+    cp1 = float(input("Checkpoint 1 (0 a 10): "))
+    if cp1 >= 0 and cp1 <= 10:
+        break
+    print("Nota inválida. Digite novamente.")
+
+# Checkpoint 2
+while True:
+    cp2 = float(input("Checkpoint 2 (0 a 10): "))
+    if cp2 >= 0 and cp2 <= 10:
+        break
+    print("Nota inválida. Digite novamente.")
+
+# Checkpoint 3
+while True:
+    cp3 = float(input("Checkpoint 3 (0 a 10): "))
+    if cp3 >= 0 and cp3 <= 10:
+        break
+    print("Nota inválida. Digite novamente.")
+
+# Sprint 1
+while True:
+    sp1 = float(input("Sprint 1 (0 a 10): "))
+    if sp1 >= 0 and sp1 <= 10:
+        break
+    print("Nota inválida. Digite novamente.")
+
+# Sprint 2
+while True:
+    sp2 = float(input("Sprint 2 (0 a 10): "))
+    if sp2 >= 0 and sp2 <= 10:
+        break
+    print("Nota inválida. Digite novamente.")
+
+# Global Solution
+while True:
+    gs = float(input("Global Solution (0 a 10): "))
+    if gs >= 0 and gs <= 10:
+        break
+    print("Nota inválida. Digite novamente.")
+
+# Descarta o menor checkpoint
+if cp1 <= cp2 and cp1 <= cp3:
+    chk1 = cp2
+    chk2 = cp3
+elif cp2 <= cp1 and cp2 <= cp3:
+    chk1 = cp1
+    chk2 = cp3
+else:
+    chk1 = cp1
+    chk2 = cp2
+
+# Média parcial (2 checkpoints + 2 sprints)
+media_parcial = (chk1 + chk2 + sp1 + sp2) / 4
+
+# Média final
+media_final = (media_parcial * 0.4) + (gs * 0.6)
+
+# Resultado
+print("Média semestral =", round(media_final, 1))
